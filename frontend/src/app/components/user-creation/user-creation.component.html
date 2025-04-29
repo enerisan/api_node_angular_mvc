@@ -1,0 +1,20 @@
+<div class="Wrapper">
+
+    <form (ngSubmit)="addUser()" class="form" #userForm="ngForm">
+        <h2>Ajouter un utilisateur</h2>
+
+        <label>Prénom</label>
+        <input type="text" name="firstname" [(ngModel)]="newUser.firstname" placeholder="Eneri" required>
+
+        <label>Nom</label>
+        <input type="text" name="lastname" [(ngModel)]="newUser.lastname" placeholder="San" required>
+
+        <label>Email</label>
+        <input type="email" name="email" [(ngModel)]="newUser.email" placeholder="enerisan@gmail.com" required>
+
+        <!-- <label>Ville</label> -->
+        <input type="text" name="city" [(ngModel)]="newUser.city" placeholder="madrid" required>
+
+        <button type="submit">Ajouter</button>
+    </form>
+</div>

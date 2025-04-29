@@ -1,0 +1,26 @@
+<div class="Wrapper">
+    <div class="Wrapper-header">
+        <h2>Liste des utilisateurs</h2>
+        <a routerLink="creation">Ajouter un utilisateur</a>
+    </div>
+
+    <table>
+        <tr class="columns">
+            <td>Nom</td>
+            <td>Prénom</td>
+            <td>Ville</td>
+            <td>Email</td>
+        </tr>
+        <tr class="rowsContent" *ngFor="let user of users">
+            <td>{{ user.firstname }}</td>
+            <td>{{ user.lastname }}</td>
+            <td>{{ user.city }}</td>
+            <td>{{ user.email }}</td>
+            <td>
+                <button (click)="deleteUser(user.id)">❌ supprimer</button>
+                <button>✒️ modifier</button>
+            </td>
+        </tr>
+    </table>
+    <router-outlet></router-outlet>
+</div>
