@@ -57,3 +57,18 @@ td {
     display: flex;
     gap: 1em;
 }
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.btn {
+    border-radius: 0;
+    max-width: 100px;
+    font-size: 0.8em;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid black;
+}

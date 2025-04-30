@@ -1,0 +1,30 @@
+.Wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+}
+
+form {
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px gray;
+    max-width: 900px;
+
+
+}
+
+input {
+    margin: 1em 0;
+    border-radius: 10px;
+    padding: 0.5em;
+}

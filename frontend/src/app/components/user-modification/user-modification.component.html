@@ -1,0 +1,21 @@
+<div class="Wrapper" *ngIf="user">
+
+
+    <form (ngSubmit)="updateUser()" class="form" #userForm="ngForm">
+        <h2>Modifier un utilisateur</h2>
+
+        <label>Prénom</label>
+        <input type="text" name="firstname" [(ngModel)]="user.firstname">
+
+        <label>Nom</label>
+        <input type="text" name="lastname" [(ngModel)]="user.lastname" required>
+
+        <label>Email</label>
+        <input type="email" name="email" [(ngModel)]="user.email" required>
+
+        <label>Ville</label>
+        <input type="text" name="city" [(ngModel)]="user.city" required>
+
+        <button type="submit">Valider mes modifications</button>
+    </form>
+</div>

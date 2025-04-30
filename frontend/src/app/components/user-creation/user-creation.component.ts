@@ -10,7 +10,7 @@ import { UserListComponent } from "../user-list/user-list.component";
 @Component({
   selector: 'app-user-creation',
   standalone: true,
-  imports: [FormsModule, CommonModule, RouterLink, RouterOutlet, UserListComponent],
+  imports: [FormsModule, CommonModule],
   templateUrl: './user-creation.component.html',
   styleUrl: './user-creation.component.css'
 })

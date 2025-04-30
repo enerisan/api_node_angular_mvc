@@ -16,9 +16,9 @@
             <td>{{ user.lastname }}</td>
             <td>{{ user.city }}</td>
             <td>{{ user.email }}</td>
-            <td>
-                <button (click)="deleteUser(user.id)">❌ supprimer</button>
-                <button>✒️ modifier</button>
+            <td class="btns">
+                <button class="btn" (click)="deleteUser(user.id)">❌ supprimer</button>
+                <a class="btn" [routerLink]="['/update', user.id]">✒️ modifier</a>
             </td>
         </tr>
     </table>
