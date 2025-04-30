@@ -24,6 +24,29 @@ exports.createUser = (req, res) => {
     });
 };
 
+
+exports.updateUser = (req, res) => {
+    const { firstname, lastname, email, city } = req.body;
+    if (!firstname || !lastname || !email) {
+        return res.status(400).send('Nom, prenom et email obligatories');
+    }
+
+    const id = parseInt(req.params.id, 10);
+    User.delete(id, (err, result) => {
+        if (err) {
+            return res.status(500).send('Erreur serveur');
+        }
+
+    })
+    User.create({ firstname, lastname, email, city }, (err, result) => {
+        if (err) {
+            return res.status(500).send('Erreur serveur');
+
+        }
+        res.status(201).json({ id: result.insertId, firstname, lastname, email, city });
+    });
+};
+
 exports.deleteUser = (req, res) => {
     const id = parseInt(req.params.id, 10);
     User.delete(id, (err, result) => {
